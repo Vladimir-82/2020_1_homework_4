@@ -17,7 +17,9 @@ K4[ON(SO3)2]2 -> {K: 4, O: 14, N: 2, S: 4}
 
 class MyClass:
 
-    def parse(self, var: str) -> dict:
+    def parse(self, var: str):
+
+
         result = {}
 
         return result
@@ -27,7 +29,7 @@ class MyClass:
 if __name__ == '__main__':
     # Here we can make console input and check how function works
 
-    var = input('Input formula: ')
+    var = input('H2O')
 
     result = MyClass().parse(var)
 

@@ -51,12 +51,12 @@ Advanced calculator. Author: [Student Name], Version: 1.0.0
 class MyClass:
 
     def advanced_calc(self, expression):
+        def sum(expression):
 
-        '''
-        Here we write all the logic and return result
 
-        :return:
-        '''
+
+        return:
+
 
 
 
@@ -66,7 +66,7 @@ class MyClass:
 if __name__ == '__main__':
     # Here we can make console input and check how function works
 
-    var = input('Input Expression: ')
+    var = input('3+2-1')
 
     result = MyClass().advanced_calc(var)
 
