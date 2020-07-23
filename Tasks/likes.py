@@ -40,20 +40,47 @@ def likes(var:str, alfabet):
             result = "Гэта нікому не падабаецца"
         elif alfabet(var) == 'RU':
             result = "Это не нравится никому"
-    elif len(var)==1:
-        result = (f'{var} likes this')
+
+    #elif len(var)==1:
+        #if alfabet(var)=='EN':
+            result = (f'{var} likes this')
+        #elif alfabet(var) == 'BY':
+            #result = (f'{var} падабаецца гэта')
+        #elif alfabet(var) == 'RU':
+            #result = (f'{var} нравится это')
+
 
     elif len(var) == 2:
-        result = (f'{var[0]} and {var[1]} like this')
+        if alfabet(var) == 'EN':
+            result = (f'{var[0]} and {var[1]} like this')
+        elif alfabet(var) == 'BY':
+            result = (f'{var[0]} and {var[1]} падабаецца гэта')
+        elif alfabet(var) == 'RU':
+            result = (f'{var[0]} and {var[1]} нравится это')
+
+
     elif len(var) == 3:
-        result = (f'{var[0]}, {var[1]} and {var[2]} like this')
+        if alfabet(var) == 'EN':
+            result = (f'{var[0]}, {var[1]} and {var[2]} like this')
+        elif alfabet(var) == 'BY':
+            result = (f'{var[0]}, {var[1]} and {var[2]} падабаецца гэта')
+        elif alfabet(var) == 'RU':
+            result = (f'{var[0]}, {var[1]} and {var[2]} нравится это')
+
 
     else:
-        result = (f'{var[0]}, {var[1]} and {len(var[2::])} others like this')
+        if alfabet(var) == 'EN':
+            result = (f'{var[0]}, {var[1]} and {len(var[2::])} others like this')
+        elif alfabet(var) == 'BY':
+            result = (f'{var[0]}, {var[1]} and {len(var[2::])} падабаецца гэта')
+        elif alfabet(var) == 'RU':
+            result = (f'{var[0]}, {var[1]} and {len(var[2::])} нравится это')
+
+
     return result
 
-var =("Jacob", "Alex")
+var =("Alex", "Jacob")
 
-result =likes(var)
+result =likes(var, alfabet)
 
 print(result)
